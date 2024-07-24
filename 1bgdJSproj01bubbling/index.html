@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="toolbar">
-        <button id="ring-button">Ring Bell</button><br>
+        <button id="ring-button">Ring Bell</button><br><br>
         <p1 id="bell"> User actions on button status 1<br>
         </p1><br>
     
@@ -40,11 +40,13 @@
         console.log("button clicked");
         b += 1;
         console.log("Number of times the button was clicked: "+ b+" .");
+        event.stopPropagation();
     });
     document.getElementById("toolbar").addEventListener("click", function (event) {
         console.log("toolbar clicked");
         t += 1;
         console.log("Number of times the tool bar was clicked: "+t+" .")
+        event.stopPropagation();
     });
     document.addEventListener("click", function (event) {
         console.log("document clicked");

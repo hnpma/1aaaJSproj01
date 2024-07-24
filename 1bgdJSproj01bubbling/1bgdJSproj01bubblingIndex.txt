@@ -3,6 +3,95 @@ C:\Users\User\Documents\1aaaJSproj01\1bgdJSproj01bubbling
 
 3:03 PM 7/24/2024
 
+
+
+
+
+==+++ 6:38 PM 7/24/2024 +++=====
+index.html file 6:38 PM 7/24/2024
+
+ERROR : Keeps displaying document was clcked when it was NOT.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Bubbling</title>
+    <style>
+    #toolbar {
+        padding: 20px 20px;
+        border: 1px solid black;
+        background-color:darkcyan;
+    }
+    #dpage {
+        padding: 30px 20px;
+    }
+</style>
+</head>
+<body>
+    <div id="toolbar">
+        <button id="ring-button">Ring Bell</button><br>
+        <p1 id="bell"> User actions on button status 1<br>
+        </p1><br>
+    
+        <p2 id="bar"> User actions on tool bar status 2<br>
+
+        </p2>
+    
+    </div> <!-- end of div with id toolbar -->
+    <div id="dpage">
+        <p3 id="docpage">User actions on rest of document status 3 <br> 
+        
+        </p3>
+    </div> <!-- end of div with id dpage -->
+
+    <script>
+        let b=0;//counts number of times ringbell BUTTON is clicked                  
+        let t=0;//counts number of times rest of the toolbar is clicked
+        let d=0;//counts number of times rest of the document is clicked
+    let button = document.getElementById("ring-button");
+   // const status = document.getELementById("bell");
+    button.addEventListener("click", function (event) {
+        console.log("button clicked");
+        b += 1;
+        console.log("Number of times the button was clicked: "+ b+" .");
+        
+    });
+    document.getElementById("toolbar").addEventListener("click", function (event) {
+        console.log("toolbar clicked");
+        t += 1;
+        console.log("Number of times the tool bar was clicked: "+t+" .")
+    });
+    document.addEventListener("click", function (event) {
+        console.log("document clicked");
+        d += 1;
+        console.log("Number of times the document was clicked: "+d+" .")
+    });
+    </script>
+</body>
+</html>
+
+///////////////DID NOT USE EXT script.js file////////////////
+
+let button = document.getElementById("ring-button");
+const tb = document.getElementById("toolbat");
+
+    button.addEventListener("click", function (event) {
+  document.getElementById("ring-button").innerHTML +=" button clicked";
+    });
+    document.getElementById("toolbar".addEventListener("click", function (event) {
+   // document.getElementById("toolbar").innerHTML += "toolbar clicked";
+    });
+    document.addEventListener("click", function (event) {
+        console.log("document clicked");
+    });
+
+///////////////////////////////////////////////////
+
+===+++ end of 6:38 PM 7/24/2024 +++===
+
+
+
+==++++  3:03 PM 7/24/2024  +++======
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,4 +123,4 @@ C:\Users\User\Documents\1aaaJSproj01\1bgdJSproj01bubbling
 </body>
 </html>
 
-
+==++++ end of 3:03 PM 7/24/2024 +++======
